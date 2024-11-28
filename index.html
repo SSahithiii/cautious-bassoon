@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slot Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Available Slots</h1>
+        <ul id="slots-list">
+            <!-- Slot items will be dynamically generated here -->
+        </ul>
+    </div>
+
+    <!-- Modal for booking -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <h2>Book Slot</h2>
+            <p id="slot-name"></p>
+            <label for="email">Enter your email:</label>
+            <input type="email" id="email" required>
+            <button onclick="bookSlot()">Book Slot</button>
+            <button onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Modal for viewing bookings -->
+    <div id="view-bookings-modal" class="modal">
+        <div class="modal-content">
+            <h2>Bookings</h2>
+            <ul id="bookings-list">
+                <!-- Bookings for the selected slot will appear here -->
+            </ul>
+            <button onclick="closeViewBookingsModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
